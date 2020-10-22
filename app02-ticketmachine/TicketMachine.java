@@ -1,31 +1,39 @@
 /**
- * TicketMachine models a ticket machine that issues
- * flat-fare tickets.
+ * TicketMachine is a model of a normal ticket machine that will print tickets to 3 seperate destinations
  * The price of a ticket is specified via the constructor.
  * Instances will check to ensure that a user only enters
  * sensible amounts of money, and will only print a ticket
  * if enough money has been input.
  * 
- * @author David J. Barnes and Michael Kölling
- * @version 2016.02.29
+ * @author Kian Rozblat
+ * @version 13/10/2020
  * 
- * Modified by Student Name
+ * Modified by Kian Rozblat
  */
+
 public class TicketMachine
 {
     // The price of a ticket from this machine.
+    public static final Ticket AYLESBURY_Ticket = new Ticket("Aylesbury", 220);
+    public static final Ticket Amersham_Ticket = new Ticket("Amersham", 300);
+    public static final Ticket High_Wycombe_Ticket = new Ticket("High Wycombe", 330);
+    // the price of the ticket
     private int price;
     // The amount of money entered by a customer so far.
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
 
+    
+    
+    
+
     /**
      * Create a machine that issues tickets of the given price.
      */
     public TicketMachine(int cost)
     {
-        price = cost;
+        price = 0;
         balance = 0;
         total = 0;
     }
@@ -46,7 +54,7 @@ public class TicketMachine
     {
         return balance;
     }
-
+    
     /**
      * Receive an amount of money from a customer.
      * Check that the amount is sensible.
@@ -63,9 +71,8 @@ public class TicketMachine
                                amount);
         }
     }
-
     /**
-     * Print a ticket if enough money has been inserted, and
+     * If enough money is inserted print a ticket and reduce balance by price of ticket
      * reduce the current balance by the ticket price. Print
      * an error message if more money is required.
      */
@@ -80,11 +87,13 @@ public class TicketMachine
             System.out.println("# " + price + " cents.");
             System.out.println("##################");
             System.out.println();
-
+   
             // Update the total collected with the price.
             total = total + price;
             // Reduce the balance by the price.
             balance = balance - price;
+       
+            
         }
         else 
         {
@@ -93,7 +102,26 @@ public class TicketMachine
                     
         }
     }
-
+    
+    public void insertCoin(Coin coin){
+        if (coin.getPrice() == 10){
+            System.out.println("10p Inserted");
+            balance = balance + coin.getPrice();
+        }
+        else if (coin.getPrice() == 20){
+            System.out.println("20p Inserted");
+            balance = balance + coin.getPrice();
+        }
+        else if (coin.getPrice() == 100){
+            System.out.println("£1.00 Inserted");
+            balance = balance + coin.getPrice();
+        }
+        else if (coin.getPrice() == 200){
+            System.out.println("£2.00 Inserted");
+            balance = balance + coin.getPrice();
+        }
+        System.out.println("your balance is " + balance);
+    }
     /**
      * Return the money in the balance.
      * The balance is cleared.
