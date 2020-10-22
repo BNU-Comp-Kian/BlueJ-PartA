@@ -1,0 +1,16 @@
+TicketMachine Aylesbury = new TicketMachine(220);
+Aylesbury.getPrice()
+    returned int 220
+TicketMachine Amersham = new TicketMachine(300);
+TicketMachine HighWycombe = new TicketMachine(330);
+Amersham.getPrice()
+    returned int 300
+HighWycombe.getPrice()
+    returned int 330
+Coin P10 = new Coin();
+Coin P50 = new Coin();
+Coin P100 = new Coin();
+Coin P200 = new Coin();
+Coin P20 = new Coin();
+Ticket Aylesbury = new Ticket();
+Ticket HighWycombe = new Ticket();
