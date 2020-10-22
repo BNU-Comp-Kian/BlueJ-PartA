@@ -9,12 +9,14 @@ import java.util.*;
  */
 public class Student
 {
+ private Course manufacturer;
     // the student's full name
     private String name;
     // the student ID
     private String id;
     // the amount of credits for study taken so far
     private int credits;
+    
     
     /**
      * Create a new student with a given name and ID number.
