@@ -1,0 +1,26 @@
+TicketMachine ticketMa1 = new TicketMachine(220);
+ticketMa1.insertCoin(Coin.P10);
+10p Inserted
+your balance is 10
+Ticket ticket1 = new Ticket("Aylesbury", 220);
+ticket1.printTicket();
+Aylesbury220Thu Oct 22 14:39:26 BST 2020
+Ticket ticket1 = new Ticket("High Wycombe", 330);
+ticket1.printTicket();
+High Wycombe330Thu Oct 22 17:00:07 BST 2020
+##################
+# The BlueJ Line
+# Ticket
+#DestinationHigh Wycombe
+# 330 cents.
+##################
+Thu Oct 22 17:00:07 BST 2020
+Ticket ticket1 = new Ticket("high wycombe", 330);
+ticket1.printTicket();
+##################
+# The BlueJ Line
+# Ticket
+#Destination high wycombe
+# 330 cents.
+##################
+Thu Oct 22 17:01:41 BST 2020
