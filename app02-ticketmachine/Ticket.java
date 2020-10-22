@@ -32,7 +32,13 @@ public class Ticket
      */
     public  void printTicket()
     {
-        // put your code here
-        System.out.println(this.destination + this.price + this.date);
+        // Simulate the printing of a ticket.
+            System.out.println("##################");
+            System.out.println("# The BlueJ Line");
+            System.out.println("# Ticket");
+            System.out.println("#Destination "+ this.destination);
+            System.out.println("# " + this.price + " cents.");
+            System.out.println("##################");
+            System.out.println(this.date);
     }
 }
