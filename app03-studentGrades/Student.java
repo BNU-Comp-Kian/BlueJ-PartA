@@ -4,7 +4,7 @@ import java.util.*;
  * The Student class represents a student in a student administration system.
  * It holds the student details relevant in our context.
  * 
- * @author Michael Kölling and David Barnes
+ * @author Kian Rozblat
  * @version 2016.02.29
  */
 public class Student
@@ -15,6 +15,8 @@ public class Student
     private String id;
     // the amount of credits for study taken so far
     private int credits;
+    //Creating the course per student
+    private Course manufacturer;
     
     /**
      * Create a new student with a given name and ID number.
@@ -76,6 +78,9 @@ public class Student
     {
         return name.substring(0,4) + id.substring(0,3);
     }
+    /**
+     * enrolling in a course
+     */
     
     /**
      * Print the student's name and ID number to the output terminal.
