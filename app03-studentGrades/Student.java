@@ -17,15 +17,19 @@ public class Student
     private int credits;
     //Creating the course per student
     private Course manufacturer;
-    
+    //
+    private String course;
+    private String courseNumber;
     /**
      * Create a new student with a given name and ID number.
      */
-    public Student(String fullName, String studentID)
+    public Student(String fullName, String studentID, String courseNumber, String course)
     {
         name = fullName;
         id = studentID;
         credits = 0;
+        course = "Computing";
+        courseNumber = "G400";
     }
 
     /**
@@ -87,6 +91,6 @@ public class Student
      */
     public void print()
     {
-        System.out.println(name + ", student ID: " + id + ", credits: " + credits);
+        System.out.println(name + ", student ID: " + id + ",Course " + course +",Course Number "+ courseNumber + "credits: " + credits);
     }
 }
