@@ -16,9 +16,9 @@ public class Student
     // the amount of credits for study taken so far
     private int credits;
     //Creating the course per student
-    private Course manufacturer;
+    private Course course;
     //
-    private String course;
+    //private String course;
     private String courseNumber;
     /**
      * Create a new student with a given name and ID number.
@@ -83,9 +83,12 @@ public class Student
         return name.substring(0,4) + id.substring(0,3);
     }
     /**
-     * enrolling in a course
+     * enrolling on a course
      */
-    
+    public void enrolCourse(Course course)
+        {
+            this.course = course;
+        }
     /**
      * Print the student's name and ID number to the output terminal.
      */
