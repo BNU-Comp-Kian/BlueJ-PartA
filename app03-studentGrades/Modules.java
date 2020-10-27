@@ -46,4 +46,44 @@ public class Modules
             System.out.print("Mark invalid");
         }
     }
+
+    public String getTitle()
+    {
+        return this.title;
+    }
+
+    public void setTitle(String title)
+    {
+        this.title = title;
+    }
+
+    public String getModuleCode()
+    {
+        return this.moduleCode;
+    }
+    
+    public void setModuleCode(String moduleCode)
+    {
+        this.moduleCode = moduleCode;
+    }
+    
+    public int getMark()
+    {
+        return this.mark;
+    }
+
+    public void setMark(int mark)
+    {
+        this.mark = mark;
+    }
+
+    public boolean isComplete()
+    {
+        return this.complete;
+    }
+
+    public void setComplete(boolean complete)
+    {
+        this.complete = complete;
+    }
 }
