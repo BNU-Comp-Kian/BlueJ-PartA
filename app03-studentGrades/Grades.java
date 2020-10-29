@@ -13,4 +13,5 @@ public enum Grades
     C,
     D,
     F,
+    X
 }
