@@ -58,7 +58,7 @@ public class Course
             case 4:module4 = module;break;
         }
     }
-    public void getGrade(Grade grade);
+    public void getGrade(Grades grades);
         {
             if((finalMark >=40) && (finalMark <=49))
             finalGrade = D;
