@@ -1,6 +1,7 @@
 
 /**
- * Write a description of class Ticket here.
+ * This class is the ticket that will stor the destination the price 
+ * and the date of purchase.
  *
  * @author (Kian Rozblat)
  * @version (13/10/2020)
@@ -23,7 +24,10 @@ public class Ticket
         this.date = new Date();
        
     }
-
+    public int getPrice()
+    {
+        return price;
+    }
     /**
      * An example of a method - replace this comment with your own
      *
