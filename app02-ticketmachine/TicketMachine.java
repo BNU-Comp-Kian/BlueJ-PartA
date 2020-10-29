@@ -14,15 +14,17 @@
 public class TicketMachine
 {
     // The price of a ticket from this machine.
-    public static final Ticket AYLESBURY_Ticket = new Ticket("Aylesbury", 220);
-    public static final Ticket Amersham_Ticket = new Ticket("Amersham", 300);
-    public static final Ticket High_Wycombe_Ticket = new Ticket("High Wycombe", 330);
+    public static final Ticket aylesburyTicket = new Ticket("Aylesbury", 220);
+    public static final Ticket amershamTicket = new Ticket("Amersham", 300);
+    public static final Ticket highWycombeTicket = new Ticket("High Wycombe", 330);
     // the price of the ticket
     private int price;
     // The amount of money entered by a customer so far.
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
+    
+    private Ticket userTicket;
     /**
      * Create a machine that issues tickets of the given price.
      */
@@ -31,6 +33,8 @@ public class TicketMachine
         price = 0;
         balance = 0;
         total = 0;
+        
+        userTicket = null;
     }
 
     /**
@@ -66,6 +70,7 @@ public class TicketMachine
                                amount);
         }
     }
+    
     /**
      * If enough money is inserted print a ticket and reduce balance by price of ticket
      * reduce the current balance by the ticket price. Print
@@ -87,7 +92,8 @@ public class TicketMachine
         }
     }
     
-    public void insertCoin(Coin coin){
+    public void insertCoin(Coin coin)
+    {
         if (coin.getPrice() == 10){
             System.out.println("10p Inserted");
             balance = balance + coin.getPrice();
@@ -106,6 +112,7 @@ public class TicketMachine
         }
         System.out.println("your balance is " + balance);
     }
+    
     /**
      * Return the money in the balance.
      * The balance is cleared.
@@ -117,8 +124,35 @@ public class TicketMachine
         balance = 0;
         return amountToRefund;
     }
-}
+    
+    public void selectAylesbury()
+    {
+        userTicket = aylesburyTicket;
+    }
+    
+    public void selectAmersham()
+    {
+        userTicket = amershamTicket;
+    }
+    
+    public void selectHighWycombe()
+    {
+        userTicket = highWycombeTicket;
+    }
+    
+    public void print()
+    {
+     if(balance >= userTicket.getPrice())
+     {
+         userTicket.getPrice();
+         balance = balance - userTicket.getPrice();
+     }
+    }
 
     
+}
+
+
+ 
         
     
