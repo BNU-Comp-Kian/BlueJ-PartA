@@ -12,21 +12,25 @@ public class Course
     //gives the course name and number as a class
     private String course ;
     private String courseNumber;
-    
+
     //this is the module marking and the final mark and also the grade
     private int modulesAmount;
+    
     private int finalCredit;
     private int finalMark;
     private int meanMark;
+    
     private Grades finalGrade;
+    
     //to see if the course is completed
     private boolean complete;
+    
     //all 4 modules
     private Module module1;
     private Module module2;
     private Module module3;
     private Module module4;
-    
+
     /**
      * Constructor for objects of class Course
      */
@@ -40,8 +44,15 @@ public class Course
         finalMark = 0;
         finalCredit = 0;
         complete = false;
+        
+        createModules();
     }
 
+    public void createModules()
+    {
+        module1 = new Module("Programming Concepts", "CO452");
+    }
+    
     /**
      * Adding the modules to the course
      */
@@ -49,7 +60,7 @@ public class Course
     {
         // put your code here
         if((number >= 1) && (number <= Max_modules)) modulesAmount++;
-        
+
         switch(number)
         {
             case 1:module1 = module;break;
@@ -58,22 +69,27 @@ public class Course
             case 4:module4 = module;break;
         }
     }
-    public void getGrade(Grades grades);
-        {
-            if((finalMark >=40) && (finalMark <=49))
-            finalGrade = D;
-            else if((finalMark >=50) && (finalMark <=59))
-            finalGrade = C;
-            else if((finalMark >=60) && (finalMark <=69))
-            finalGrade = B;
-            else if((finalMark >=70) && (finalMark <=100))
-            finalGrade = A;
+
+    public void calculateGrade()
+    {
+        if((finalMark >= 40) && (finalMark < 50))
+            finalGrade = Grades.D;
             
-            System.out.println("congratulations you've passed with the grade " + finalGrade);
+        else if((finalMark >= 50) && (finalMark <= 59))
+            finalGrade = Grades.C;
             
-            if((finalMark >= 0) && (finalMark <= 39))
+        else if((finalMark >=60) && (finalMark <=69))
+            finalGrade = Grades.B;
+            
+        else if((finalMark >=70) && (finalMark <=100))
+            finalGrade = Grades.A;
+
+        System.out.println("congratulations you've passed with the grade " + finalGrade);
+
+        if((finalMark >= 0) && (finalMark <= 39))
             System.out.println("Unfortunately you failed");
-        }
+    }
+
     /*
      * printing out the course details
      */
