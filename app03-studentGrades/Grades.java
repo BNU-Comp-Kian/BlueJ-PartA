@@ -1,11 +1,16 @@
 
 /**
- * Enumeration class Grades - write a description of the enum class here
+ * Enumeration class Grades
  *
- * @author (your name here)
+ * @author (Kian Rozblat)
  * @version (version number or date here)
  */
+// Static grades 
 public enum Grades
 {
-    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+    A,
+    B,
+    C,
+    D,
+    F,
 }
