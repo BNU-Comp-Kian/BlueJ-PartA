@@ -7,12 +7,6 @@
  */
 public class Course
 {
-    // Static grades 
-    public static final int F = 0-39;
-    public static final int D = 40-49;
-    public static final int C = 50-59;
-    public static final int B = 60-69;
-    public static final int A = 70-100;
     //this will make sure the maximum modules are 4
     public static final int Max_modules = 4;
     //gives the course name and number as a class
@@ -64,7 +58,22 @@ public class Course
             case 4:module4 = module;break;
         }
     }
-    
+    public void getGrade(Grade grade);
+        {
+            if((finalMark >=40) && (finalMark <=49))
+            finalGrade = D;
+            else if((finalMark >=50) && (finalMark <=59))
+            finalGrade = C;
+            else if((finalMark >=60) && (finalMark <=69))
+            finalGrade = B;
+            else if((finalMark >=70) && (finalMark <=100))
+            finalGrade = A;
+            
+            System.out.println("congratulations you've passed with the grade " + finalGrade);
+            
+            if((finalMark >= 0) && (finalMark <= 39))
+            System.out.println("Unfortunately you failed");
+        }
     /*
      * printing out the course details
      */
