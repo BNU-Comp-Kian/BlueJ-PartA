@@ -2,32 +2,48 @@
 /**
  * Write a description of class Course here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (kian Rozblat)
+ * @version (29/10/2020)
  */
 public class Course
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    
+    private String courseCode;
+    
+    private String courseName;
 
     /**
      * Constructor for objects of class Course
      */
-    public Course()
+    public Course(String courseName, String courseNumber)
     {
         // initialise instance variables
-        x = 0;
+         this.courseCode = courseCode;
+         this.courseName = courseName;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * this will return the course code
      */
-    public int sampleMethod(int y)
+    public String getCodeNumber()
     {
         // put your code here
-        return x + y;
+        return courseCode;
+    }
+    
+    /**
+     * this will return the name of the course
+     */
+    public String getCourseName()
+    {
+        return courseName;
+    }
+    
+    /**
+     * this will print the details of the course
+     */
+    public void print()
+    {
+        System.out.println("course = " + courseCode + " Course name = " + courseName);
     }
 }
