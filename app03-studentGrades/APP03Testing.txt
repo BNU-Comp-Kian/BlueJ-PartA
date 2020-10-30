@@ -1,0 +1,65 @@
+Student student1 = new Student("Kian Rozblat", "21908377", "G400", "Computing");
+Course course1 = new Course("G400", "Computing");
+Student student1 = new Student("Kian", "21908377", "G400", "Computing");
+Course course1 = new Course("G400", "Computing");
+Module module1 = new Module("Web Development", "C0456");
+module1.getModuleCode()
+    returned String "C0456"
+Student student1 = new Student("Kian", "21908377", "G400", "Computing");
+Course course1 = new Course("G400", "Computing");
+Module module1 = new Module("Programming Concepts", "C0452");
+Module module2 = new Module("Web Development", "CO456");
+Module module3 = new Module("Digital Technologies", "CO454");
+Module module4 = new Module("Computer Architecture", "CO450");
+course1.addModules(1, module1);
+course1.addModules(2, module2);
+course1.addModules(3, module3);
+course1.addModules(4, module4);
+module1.isComplete()
+    returned boolean false
+module2.isComplete()
+    returned boolean false
+module3.isComplete()
+    returned boolean false
+module4.isComplete()
+    returned boolean false
+module1.getMark()
+    returned int 0
+module1.setMark(40);
+module1.isComplete()
+    returned boolean false
+module1.getMark()
+    returned int 40
+module1.mark(40);
+module1.isComplete()
+    returned boolean true
+module1.getTitle()
+    returned String "Programming Concepts"
+module1.getModuleCode()
+    returned String "C0452"
+module2.mark(52);
+module3.mark(40);
+module4.mark(32);
+course1.calculateGrade();
+congratulations you've passed with the grade null
+Unfortunately you failed
+module4.mark(40);
+course1.calculateMark();
+course1.calculateGrade();
+congratulations you've passed with the grade D
+module1.getModuleCode()
+    returned String "C0452"
+module1.getTitle()
+    returned String "Programming Concepts"
+module2.getModuleCode()
+    returned String "CO456"
+module2.getTitle()
+    returned String "Web Development"
+module3.getModuleCode()
+    returned String "CO454"
+module3.getTitle()
+    returned String "Digital Technologies"
+module4.getModuleCode()
+    returned String "CO450"
+module4.getTitle()
+    returned String "Computer Architecture"
