@@ -29,10 +29,8 @@ public class Module
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Inputting mark and checking if they pass
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
      */
     public void mark(int mark)
     {
