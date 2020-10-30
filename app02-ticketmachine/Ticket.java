@@ -43,7 +43,7 @@ public class Ticket
             System.out.println("# The BlueJ Line");
             System.out.println("# Ticket");
             System.out.println("#Destination "+ this.destination);
-            System.out.println("# " + this.price + " cents.");
+            System.out.println("# " + this.price + " P");
             System.out.println("##################");
             System.out.println(this.date);
     }
