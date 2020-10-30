@@ -1,0 +1,87 @@
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.insertCoin(Coin.P10);
+10p Inserted
+your balance is 10
+ticketMa1.insertMoney(200);
+your balance is 210
+ticketMa1.selectAmersham();
+ticketMa1.print();
+ticketMa1.printTicket();
+You must insert at least: 90 more cents.
+ticketMa1.insertMoney(90);
+your balance is 300
+ticketMa1.printTicket();
+ticketMa1.selectAmersham();
+ticketMa1.printTicket();
+You must insert at least: 300 more cents.
+ticketMa1.printBalance();
+your balance is 0
+ticketMa1.print();
+ticketMa1.insertMoney(900);
+your balance is 900
+ticketMa1.refundBalance()
+    returned int 900
+ticketMa1.printBalance();
+your balance is 0
+ticketMa1.insertMoney(310);
+your balance is 310
+ticketMa1.selectHighWycombe();
+ticketMa1.printTicket();
+You must insert at least: 20 more cents.
+ticketMa1.insertMoney(20);
+your balance is 330
+ticketMa1.selectHighWycombe();
+ticketMa1.printTicket();
+Ticket ticket1 = new Ticket("Amersham", 220);
+ticket1.print();
+##################
+# The BlueJ Line
+# Ticket
+#Destination Amersham
+# 220 cents.
+##################
+Fri Oct 30 13:50:39 GMT 2020
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.insertMoney(900);
+your balance is 900
+ticketMa1.selectAylesbury();
+ticketMa1.printBalance();
+your balance is 900
+ticketMa1.printTicket();
+ticketMa1.selectAylesbury();
+ticketMa1.print();
+##################
+# The BlueJ Line
+# Ticket
+#Destination Aylesbury
+# 220 P
+##################
+Fri Oct 30 13:53:18 GMT 2020
+your balance is 460
+ticketMa1.selectAmersham();
+ticketMa1.print();
+##################
+# The BlueJ Line
+# Ticket
+#Destination Amersham
+# 300 P
+##################
+Fri Oct 30 13:53:18 GMT 2020
+your balance is 160
+ticketMa1.selectHighWycombe();
+ticketMa1.insertMoney(400);
+your balance is 560
+ticketMa1.selectHighWycombe();
+ticketMa1.print();
+##################
+# The BlueJ Line
+# Ticket
+#Destination High Wycombe
+# 330 P
+##################
+Fri Oct 30 13:53:18 GMT 2020
+your balance is 230
+ticketMa1.refundBalance()
+    returned int 230
+ticketMa1.printBalance();
+your balance is 0
