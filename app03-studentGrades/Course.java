@@ -18,7 +18,8 @@ public class Course
     
     private int finalCredit;
     private int finalMark;
-    private int meanMark;
+    private int calculateMark;
+    private int total;
     
     private Grades finalGrade;
     
@@ -70,6 +71,16 @@ public class Course
         }
     }
 
+    /**
+     * this will calulate all the marks from the modules and work out the 
+     * average
+     */
+    public void calculateMark()
+    {
+        total = module1.getMark() + module2.getMark() + module3.getMark() + module3.getMark();
+        finalMark = total / 4;
+    }
+    
     public void calculateGrade()
     {
         if((finalMark >= 40) && (finalMark < 50))
