@@ -1,8 +1,8 @@
 /**
  * Model some details of a product sold by a company.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @author Kian Rozblat.
+ * @version 01/11/20
  */
 public class Product
 {
@@ -53,7 +53,7 @@ public class Product
     /**
      * @return The id, name and quantity in stock.
      */
-    public String toString()
+    public String productInfo()
     {
         return id + ": " +  name + " stock level: " + quantity;
     }
@@ -93,4 +93,13 @@ public class Product
                 "Attempt to sell an out of stock item: " + name);
         }
     }
+
+    /**
+     * Renames the product from id
+     */
+    public void renameProduct(String name)
+    {
+        this.name = name;
+    }
+    
 }
