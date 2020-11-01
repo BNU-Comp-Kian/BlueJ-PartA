@@ -3,8 +3,8 @@
  * The demonstration becomes properly functional as
  * the StockManager class is completed.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @author Kian Rozblat
+ * @version 01/11/20
  */
 public class StockDemo
 {
@@ -18,9 +18,14 @@ public class StockDemo
     public StockDemo()
     {
         manager = new StockManager();
-        manager.addProduct(new Product(132, "Clock Radio"));
-        manager.addProduct(new Product(37,  "Mobile Phone"));
-        manager.addProduct(new Product(23,  "Microwave Oven"));
+        manager.addProduct(new Product(2, "Samsung Galazy Z Fold 2 5G"));
+        manager.addProduct(new Product(15, "Samsung Galaxy Note 20"));
+        manager.addProduct(new Product(146, "Apple iPhone 12"));
+        manager.addProduct(new Product(182, "Samsung Galaxy S20"));
+        manager.addProduct(new Product(120, "Google Pixel 5"));
+        manager.addProduct(new Product(522, "OnePlus 8"));
+        manager.addProduct(new Product(312, "LG V60 ThinQ 5G"));
+        manager.addProduct(new Product(420, "Samsung Galaxy S20 FE"));
     }
     
     /**
@@ -94,4 +99,5 @@ public class StockDemo
     {
         return manager;
     }
+    
 }
