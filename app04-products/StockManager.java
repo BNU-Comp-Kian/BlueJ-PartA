@@ -1,11 +1,12 @@
+
 import java.util.ArrayList;
 
 /**
  * Manage the stock in a business.
  * The stock is described by zero or more Products.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Kian Rozblat) 
+ * @version (01/11/20)
  */
 public class StockManager
 {
@@ -32,17 +33,14 @@ public class StockManager
     /**
      * Receive a delivery of a particular product.
      * Increase the quantity of the product by the given amount.
-     * @param id The ID of the product.
-     * @param amount The amount to increase the quantity by.
      */
     public void delivery(int id, int amount)
     {
+        
     }
     
     /**
      * Try to find a product in the stock with the given id.
-     * @return The identified product, or null if there is none
-     *         with a matching ID.
      */
     public Product findProduct(int id)
     {
@@ -66,5 +64,14 @@ public class StockManager
      */
     public void printProductDetails()
     {
+        
+    }
+    
+    /**
+     * Print out the low stock products
+     */
+    public void printLowStock()
+    {
+        
     }
 }
