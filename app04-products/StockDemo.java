@@ -30,11 +30,11 @@ public class StockDemo
         manager.addProduct(new Product(103, "Apple iPhone 12"));
         manager.addProduct(new Product(104, "Samsung Galaxy S20"));
         manager.addProduct(new Product(105, "Google Pixel 5"));
-        manager.addProduct(new Product(106, "OnePlus 8"));
+        manager.addProduct(new Product(106, "OnePlus 8T"));
         manager.addProduct(new Product(107, "LG V60 ThinQ 5G"));
         manager.addProduct(new Product(108, "Samsung Galaxy S11 FE"));
-        manager.addProduct(new Product(109, "LG V50 ThinQ 5G"));
-        manager.addProduct(new Product(110, "Samsung Galaxy S112 FE"));
+        manager.addProduct(new Product(109, "Sony Xperia 1 II"));
+        manager.addProduct(new Product(110, "Samsung Galaxy Note 10 Plus"));
     }
     
     /**
