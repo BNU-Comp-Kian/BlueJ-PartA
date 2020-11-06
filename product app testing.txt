@@ -1,0 +1,78 @@
+StockManager stockMan1 = new StockManager();
+StockDemo stockDem1 = new StockDemo(stockMan1);
+StockManager stockMan2 = new StockManager();
+StockDemo stockDem2 = new StockDemo(stockMan2);
+stockDem2.runDemo();
+
+Rozblat's List of Stock
+========================
+
+
+101: Samsung Galazy Z Fold 2 5G Stock Level: 0
+102: Samsung Galaxy Note 20 Stock Level: 0
+103: Apple iPhone 12 Stock Level: 0
+104: Samsung Galaxy S20 Stock Level: 0
+105: Google Pixel 5 Stock Level: 0
+106: OnePlus 8T Stock Level: 0
+107: LG V60 ThinQ 5G Stock Level: 0
+108: Samsung Galaxy S11 FE Stock Level: 0
+109: Sony Xperia 1 II Stock Level: 0
+110: Samsung Galaxy Note 10 Plus Stock Level: 0
+
+
+Rozblat's List of Stock
+========================
+
+
+101: Samsung Galazy Z Fold 2 5G Stock Level: 1
+102: Samsung Galaxy Note 20 Stock Level: 2
+103: Apple iPhone 12 Stock Level: 6
+104: Samsung Galaxy S20 Stock Level: 10
+105: Google Pixel 5 Stock Level: 9
+106: OnePlus 8T Stock Level: 3
+107: LG V60 ThinQ 5G Stock Level: 2
+108: Samsung Galaxy S11 FE Stock Level: 3
+109: Sony Xperia 1 II Stock Level: 6
+110: Samsung Galaxy Note 10 Plus Stock Level: 0
+
+101: Samsung Galazy Z Fold 2 5G Stock Level: 1
+Attempt to sell an out of stock item: Samsung Galazy Z Fold 2 5G
+101: Samsung Galazy Z Fold 2 5G Stock Level: 0
+102: Samsung Galaxy Note 20 Stock Level: 2
+Attempt to sell an out of stock item: Samsung Galaxy Note 20
+102: Samsung Galaxy Note 20 Stock Level: 0
+103: Apple iPhone 12 Stock Level: 6
+103: Apple iPhone 12 Stock Level: 2
+104: Samsung Galaxy S20 Stock Level: 10
+104: Samsung Galaxy S20 Stock Level: 9
+105: Google Pixel 5 Stock Level: 9
+105: Google Pixel 5 Stock Level: 8
+106: OnePlus 8T Stock Level: 3
+106: OnePlus 8T Stock Level: 2
+107: LG V60 ThinQ 5G Stock Level: 2
+Attempt to sell an out of stock item: LG V60 ThinQ 5G
+107: LG V60 ThinQ 5G Stock Level: 0
+108: Samsung Galaxy S11 FE Stock Level: 3
+Attempt to sell an out of stock item: Samsung Galaxy S11 FE
+108: Samsung Galaxy S11 FE Stock Level: 0
+109: Sony Xperia 1 II Stock Level: 6
+109: Sony Xperia 1 II Stock Level: 5
+110: Samsung Galaxy Note 10 Plus Stock Level: 0
+Attempt to sell an out of stock item: Samsung Galaxy Note 10 Plus
+110: Samsung Galaxy Note 10 Plus Stock Level: 0
+
+Rozblat's List of Stock
+========================
+
+
+101: Samsung Galazy Z Fold 2 5G Stock Level: 0
+102: Samsung Galaxy Note 20 Stock Level: 0
+103: Apple iPhone 12 Stock Level: 2
+104: Samsung Galaxy S20 Stock Level: 9
+105: Google Pixel 5 Stock Level: 8
+106: OnePlus 8T Stock Level: 2
+107: LG V60 ThinQ 5G Stock Level: 0
+108: Samsung Galaxy S11 FE Stock Level: 0
+109: Sony Xperia 1 II Stock Level: 5
+110: Samsung Galaxy Note 10 Plus Stock Level: 0
+
