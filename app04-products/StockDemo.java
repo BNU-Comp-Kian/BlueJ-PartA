@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /**
  * Demonstrate the StockManager and Product classes.
  * The demonstration becomes properly functional as
@@ -10,22 +12,42 @@ public class StockDemo
 {
     // The stock manager.
     private StockManager manager;
-
+    
+    private Random randomGenerator;
+    
     /**
      * Create a StockManager and populate it with a few
      * sample products.
      */
-    public StockDemo()
+    public StockDemo(StockManager manager)
     {
-        manager = new StockManager();
-        manager.addProduct(new Product(2, "Samsung Galazy Z Fold 2 5G"));
-        manager.addProduct(new Product(15, "Samsung Galaxy Note 20"));
-        manager.addProduct(new Product(146, "Apple iPhone 12"));
-        manager.addProduct(new Product(182, "Samsung Galaxy S20"));
-        manager.addProduct(new Product(120, "Google Pixel 5"));
-        manager.addProduct(new Product(522, "OnePlus 8"));
-        manager.addProduct(new Product(312, "LG V60 ThinQ 5G"));
-        manager.addProduct(new Product(420, "Samsung Galaxy S20 FE"));
+        this.manager = manager;
+        
+        randomGenerator = new Random();
+        
+        manager.addProduct(new Product(101, "Samsung Galazy Z Fold 2 5G"));
+        manager.addProduct(new Product(102, "Samsung Galaxy Note 20"));
+        manager.addProduct(new Product(103, "Apple iPhone 12"));
+        manager.addProduct(new Product(104, "Samsung Galaxy S20"));
+        manager.addProduct(new Product(105, "Google Pixel 5"));
+        manager.addProduct(new Product(106, "OnePlus 8"));
+        manager.addProduct(new Product(107, "LG V60 ThinQ 5G"));
+        manager.addProduct(new Product(108, "Samsung Galaxy S11 FE"));
+        manager.addProduct(new Product(109, "LG V50 ThinQ 5G"));
+        manager.addProduct(new Product(110, "Samsung Galaxy S112 FE"));
+    }
+    
+    /**
+     * this method will run all the testing which is needed to 
+     * demonstrate the requirements
+     */
+    public void runDemo()
+    {
+        manager.printAllProducts();
+        demoDeliverProducts();
+        manager.printAllProducts();
+        demoSellProducts();
+        manager.printAllProducts();
     }
     
     /**
@@ -33,13 +55,31 @@ public class StockDemo
      * might be used. Details of one product are shown, the
      * product is restocked, and then the details are shown again.
      */
-    public void demo()
+    private void demoDeliverProducts()
+    { 
+        int quantity = 0;
+        
+        for(int id = 101; id <110; id++)
+        {
+            quantity = randomGenerator.nextInt(10) + 1 ;
+            manager.deliverProduct(id,quantity);  
+        }   
+    }
+    
+    /**
+     * Sell one of the given item.
+     * Show the before and after status of the product.
+     * @param id The ID of the product being sold.
+     */
+    private void demoSellProducts()
     {
-        // Show details of all of the products.
-        manager.printProductDetails();
-        // Take delivery of 5 items of one of the products.
-        manager.delivery(132, 5);
-        manager.printProductDetails();
+        int quantity = 0;
+        
+        for(int id = 101; id <= 110; id++) 
+        {
+            quantity = randomGenerator.nextInt(4);
+            manager.sellProduct(id,quantity);
+        }
     }
     
     /**
@@ -54,23 +94,6 @@ public class StockDemo
         if(product != null) 
         {
             System.out.println(product.toString());
-        }
-    }
-    
-    /**
-     * Sell one of the given item.
-     * Show the before and after status of the product.
-     * @param id The ID of the product being sold.
-     */
-    public void sellProduct(int id)
-    {
-        Product product = getProduct(id);
-        
-        if(product != null) 
-        {
-            showDetails(id);
-            product.sellOne();
-            showDetails(id);
         }
     }
     
