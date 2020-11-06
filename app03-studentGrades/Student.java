@@ -82,6 +82,7 @@ public class Student
     {
         return name.substring(0,4) + id.substring(0,3);
     }
+    
     /**
      * enrolling on a course
      */
@@ -89,6 +90,7 @@ public class Student
         {
             this.course = course;
         }
+        
     /**
      * Print the student's name and ID number to the output terminal.
      */

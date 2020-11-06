@@ -80,7 +80,7 @@ public class Course
      */
     public void calculateMark()
     {
-        total = module1.getMark() + module2.getMark() + module3.getMark() + module3.getMark();
+        total = module1.getMark() + module2.getMark() + module3.getMark() + module4.getMark();
         finalMark = total / 4;
     }
     
@@ -89,10 +89,10 @@ public class Course
         if((finalMark >= 40) && (finalMark < 50))
             finalGrade = Grades.D;
             
-        else if((finalMark >= 50) && (finalMark <= 59))
+        else if((finalMark >= 50) && (finalMark < 60))
             finalGrade = Grades.C;
             
-        else if((finalMark >=60) && (finalMark <=69))
+        else if((finalMark >=60) && (finalMark <70))
             finalGrade = Grades.B;
             
         else if((finalMark >=70) && (finalMark <=100))
