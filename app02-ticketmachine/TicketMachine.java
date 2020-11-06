@@ -30,7 +30,6 @@ public class TicketMachine
         userTicket = null;
     }
 
-
     /**
      * Return The amount of money already inserted for the
      * next ticket.
@@ -122,8 +121,6 @@ public class TicketMachine
          printBalance();
      }
     }
-
-    
 }
 
 
