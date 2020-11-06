@@ -51,14 +51,6 @@ public class Product
     }
 
     /**
-     * @return The id, name and quantity in stock.
-     */
-    public String productInfo()
-    {
-        return id + ": " +  name + " stock level: " + quantity;
-    }
-
-    /**
      * Restock with the given amount of this product.
      * The current quantity is incremented by the given amount.
      * @param amount The number of new items added to the stock.
@@ -102,7 +94,7 @@ public class Product
     /**
      * Renames the product from id
      */
-    public void renameProduct(String name)
+    public void renameProduct(int id)
     {
         this.name = name;
     }

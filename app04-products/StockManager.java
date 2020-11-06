@@ -13,7 +13,7 @@ public class StockManager
     private ArrayList<Product> stock;
 
     /**
-     * Initialise the stock manager.
+     * Starts the stock manager.
      */
     public StockManager()
     {

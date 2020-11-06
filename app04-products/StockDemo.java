@@ -16,8 +16,9 @@ public class StockDemo
     private Random randomGenerator;
     
     /**
-     * Create a StockManager and populate it with a few
-     * sample products.
+     * This creates a StockManager and will populate it with 10 
+     * sample products. and also includes a random number generator 
+     * to be used in deliveries
      */
     public StockDemo(StockManager manager)
     {
@@ -51,9 +52,7 @@ public class StockDemo
     }
     
     /**
-     * Provide a very simple demonstration of how a StockManager
-     * might be used. Details of one product are shown, the
-     * product is restocked, and then the details are shown again.
+     * This will do a delivery as long as the ID number is 
      */
     private void demoDeliverProducts()
     { 
