@@ -91,7 +91,7 @@ public class Product
     /**
      * Renames the product from id
      */
-    public void renameProduct(int id)
+    public void renameProduct(String name)
     {
         this.name = name;
     }

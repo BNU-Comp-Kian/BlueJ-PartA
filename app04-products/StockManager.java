@@ -142,6 +142,7 @@ public class StockManager
     public void renameProduct(int id,String newName)
     {
         Product product = findProduct(id);
+        if (product != null)
         {
                 String oldName = product.getName();
                 product.renameProduct(newName);
@@ -167,5 +168,21 @@ public class StockManager
             }
         }
         return result;
+    }
+    
+     /**
+     * Try to find a product in the stock with the given id.
+     */
+    public void searchByName(String name)
+    {
+        for(Product product : stock)
+        {
+            name = name.toLowerCase();
+            String productName = product.getName().toLowerCase();
+            if(productName.startsWith(name))
+            {
+                System.out.println(product);
+            }
+        }
     }
 }
