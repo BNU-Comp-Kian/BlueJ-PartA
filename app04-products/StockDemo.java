@@ -83,9 +83,7 @@ public class StockDemo
     }
     
     /**
-     * Show details of the given product. If found,
-     * its name and stock quantity will be shown.
-     * @param id The ID of the product to look for.
+     * Show details of the given product. If found from id
      */
     public void showDetails(int id)
     {
@@ -100,8 +98,6 @@ public class StockDemo
     /**
      * Get the product with the given id from the manager.
      * An error message is printed if there is no match.
-     * @param id The ID of the product.
-     * @return The Product, or null if no matching one is found.
      */
     public Product getProduct(int id)
     {

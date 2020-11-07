@@ -11,7 +11,8 @@ public class StockManager
 {
     // A list of the products.
     private ArrayList<Product> stock;
-
+    private String newProductName;
+    
     /**
      * Starts the stock manager.
      */
@@ -46,7 +47,7 @@ public class StockManager
                 product.sellOne();
             }
         
-        printProduct(id);
+            printProduct(id);
         }
     }
     
@@ -81,11 +82,7 @@ public class StockManager
     }
     
     /**
-     * Locate a product with the given ID, and return how
-     * many of this item are in stock. If the ID does not
-     * match any product, return zero.
-     * @param id The ID of the product.
-     * @return The quantity of the given product in stock.
+     * using the ID it would show the number in stock
      */
     public int numberInStock(int id)
     {
@@ -111,7 +108,7 @@ public class StockManager
         System.out.println();
     }
     
-    /**
+    /**this prints out the products from the id
      * 
      */
     public void printProduct(int id)
@@ -125,7 +122,7 @@ public class StockManager
     }
     
     /**
-     * 
+     * allows the mnager to delete the product based on ID
      */
     public void deleteProduct(int id)
     {
@@ -140,14 +137,14 @@ public class StockManager
     }
     
     /**
-     * 
+     * this renames the product based on the ID
      */
-    public void renameProduct(int id,String newProductName)
+    public void renameProduct(int id,String newName)
     {
         Product product = findProduct(id);
         {
                 String oldName = product.getName();
-                product.renameProduct(newProductName);
+                product.renameProduct(newName);
 
                 if(oldName != product.getName())
                 {
@@ -157,6 +154,9 @@ public class StockManager
         }
     }
     
+    /**this prints all the products with stock less than 3
+     * 
+     */
     public ArrayList<Product> getLowStock() 
     {
         ArrayList<Product> result = new ArrayList<Product>();

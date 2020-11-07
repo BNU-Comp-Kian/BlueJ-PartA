@@ -15,9 +15,6 @@ public class Product
 
     /**
      * Constructor for objects of class Product.
-     * The initial stock quantity is zero.
-     * @param id The product's identifying number.
-     * @param name The product's name.
      */
     public Product(int id, String name)
     {
@@ -27,7 +24,7 @@ public class Product
     }
 
     /**
-     * @return The product's id.
+     * this returns the id of the product
      */
     public int getID()
     {
@@ -35,7 +32,7 @@ public class Product
     }
 
     /**
-     * @return The product's name.
+     * this returns the name of the product
      */
     public String getName()
     {
@@ -43,7 +40,7 @@ public class Product
     }
 
     /**
-     * @return The quantity in stock.
+     * returns the quantity of the stock
      */
     public int getQuantity()
     {
@@ -51,10 +48,7 @@ public class Product
     }
 
     /**
-     * Restock with the given amount of this product.
-     * The current quantity is incremented by the given amount.
-     * @param amount The number of new items added to the stock.
-     *               This must be greater than zero.
+     * adds the the quantity of the stock
      */
     public void deliver(int amount)
     {
@@ -70,8 +64,8 @@ public class Product
     }
 
     /**
-     * Sell one of these products.
-     * An error is reported if there appears to be no stock.
+     * Sell one of the products.
+     * With an error is reported if there appears to be no stock.
      */
     public void sellOne()
     {
@@ -86,6 +80,9 @@ public class Product
         }
     }
     
+    /**
+     * converts the information into a string
+     */
     public String toString()
     {
         return id + ": " + name + " Stock Level: " + quantity;
