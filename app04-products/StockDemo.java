@@ -49,6 +49,7 @@ public class StockDemo
         manager.printAllProducts();
         demoSellProducts();
         manager.printAllProducts();
+        manager.getLowStock();
     }
     
     /**

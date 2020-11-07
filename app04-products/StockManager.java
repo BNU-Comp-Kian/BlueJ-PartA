@@ -123,4 +123,49 @@ public class StockManager
             System.out.println(product.toString());
         }
     }
+    
+    /**
+     * 
+     */
+    public void deleteProduct(int id)
+    {
+        Product product = findProduct(id);
+        {
+                if(product != null)
+                {
+                    this.stock.remove(product);
+                    System.out.print("You have deleted " + product);
+                }
+        }
+    }
+    
+    /**
+     * 
+     */
+    public void renameProduct(int id,String newProductName)
+    {
+        Product product = findProduct(id);
+        {
+                String oldName = product.getName();
+                product.renameProduct(newProductName);
+
+                if(oldName != product.getName())
+                {
+                    System.out.println("You have successfully renamed "+ oldName+ " to " + product.getName());
+                }
+
+        }
+    }
+    
+    public ArrayList<Product> getLowStock() 
+    {
+        ArrayList<Product> result = new ArrayList<Product>();
+        for (Product product : stock) {
+            if(product.getQuantity() <= 3)
+            {
+                System.out.println("The following products are low in stock " + product);
+            }
+        }
+        return result;
+    }
 }
