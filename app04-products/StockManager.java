@@ -161,16 +161,17 @@ public class StockManager
     public ArrayList<Product> getLowStock() 
     {
         ArrayList<Product> result = new ArrayList<Product>();
-        for (Product product : stock) {
+        for (Product product : stock) 
+        {
             if(product.getQuantity() <= 3)
             {
-                System.out.println("The following products are low in stock " + product);
+                System.out.println("Products that are low in stock " + product);
             }
         }
         return result;
     }
     
-     /**
+    /**
      * Try to find a product in the stock with the given id.
      */
     public void searchByName(String name)

@@ -1,0 +1,86 @@
+StockManager stockMan1 = new StockManager();
+StockDemo stockDem1 = new StockDemo(stockMan1);
+stockDem1.runDemo();
+
+Rozblat's List of Stock
+========================
+
+
+101: Samsung Galazy Z Fold 2 5G Stock Level: 0
+102: Samsung Galaxy Note 20 Stock Level: 0
+103: Apple iPhone 12 Stock Level: 0
+104: Samsung Galaxy S20 Stock Level: 0
+105: Google Pixel 5 Stock Level: 0
+106: OnePlus 8T Stock Level: 0
+107: LG V60 ThinQ 5G Stock Level: 0
+108: Samsung Galaxy S11 FE Stock Level: 0
+109: Sony Xperia 1 II Stock Level: 0
+110: Samsung Galaxy Note 10 Plus Stock Level: 0
+
+
+Rozblat's List of Stock
+========================
+
+
+101: Samsung Galazy Z Fold 2 5G Stock Level: 8
+102: Samsung Galaxy Note 20 Stock Level: 4
+103: Apple iPhone 12 Stock Level: 10
+104: Samsung Galaxy S20 Stock Level: 2
+105: Google Pixel 5 Stock Level: 6
+106: OnePlus 8T Stock Level: 5
+107: LG V60 ThinQ 5G Stock Level: 3
+108: Samsung Galaxy S11 FE Stock Level: 1
+109: Sony Xperia 1 II Stock Level: 3
+110: Samsung Galaxy Note 10 Plus Stock Level: 0
+
+101: Samsung Galazy Z Fold 2 5G Stock Level: 8
+101: Samsung Galazy Z Fold 2 5G Stock Level: 5
+102: Samsung Galaxy Note 20 Stock Level: 4
+102: Samsung Galaxy Note 20 Stock Level: 2
+103: Apple iPhone 12 Stock Level: 10
+103: Apple iPhone 12 Stock Level: 8
+104: Samsung Galaxy S20 Stock Level: 2
+104: Samsung Galaxy S20 Stock Level: 1
+105: Google Pixel 5 Stock Level: 6
+105: Google Pixel 5 Stock Level: 2
+106: OnePlus 8T Stock Level: 5
+106: OnePlus 8T Stock Level: 1
+107: LG V60 ThinQ 5G Stock Level: 3
+107: LG V60 ThinQ 5G Stock Level: 2
+108: Samsung Galaxy S11 FE Stock Level: 1
+Attempt to sell an out of stock item: Samsung Galaxy S11 FE
+108: Samsung Galaxy S11 FE Stock Level: 0
+109: Sony Xperia 1 II Stock Level: 3
+109: Sony Xperia 1 II Stock Level: 0
+110: Samsung Galaxy Note 10 Plus Stock Level: 0
+Attempt to sell an out of stock item: Samsung Galaxy Note 10 Plus
+110: Samsung Galaxy Note 10 Plus Stock Level: 0
+
+Rozblat's List of Stock
+========================
+
+
+101: Samsung Galazy Z Fold 2 5G Stock Level: 5
+102: Samsung Galaxy Note 20 Stock Level: 2
+103: Apple iPhone 12 Stock Level: 8
+104: Samsung Galaxy S20 Stock Level: 1
+105: Google Pixel 5 Stock Level: 2
+106: OnePlus 8T Stock Level: 1
+107: LG V60 ThinQ 5G Stock Level: 2
+108: Samsung Galaxy S11 FE Stock Level: 0
+109: Sony Xperia 1 II Stock Level: 0
+110: Samsung Galaxy Note 10 Plus Stock Level: 0
+
+The following products are low in stock 102: Samsung Galaxy Note 20 Stock Level: 2
+The following products are low in stock 104: Samsung Galaxy S20 Stock Level: 1
+The following products are low in stock 105: Google Pixel 5 Stock Level: 2
+The following products are low in stock 106: OnePlus 8T Stock Level: 1
+The following products are low in stock 107: LG V60 ThinQ 5G Stock Level: 2
+The following products are low in stock 108: Samsung Galaxy S11 FE Stock Level: 0
+The following products are low in stock 109: Sony Xperia 1 II Stock Level: 0
+The following products are low in stock 110: Samsung Galaxy Note 10 Plus Stock Level: 0
+stockMan1.renameProduct(101, "iphone 13");
+You have successfully renamed Samsung Galazy Z Fold 2 5G to iphone 13
+stockMan1.deleteProduct(101);
+You have deleted 101: iphone 13 Stock Level: 5stockMan1.searchByName("apple");
+103: Apple iPhone 12 Stock Level: 8
