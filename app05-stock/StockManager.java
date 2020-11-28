@@ -1,33 +1,188 @@
-
+import java.util.ArrayList;
 /**
- * Write a description of class StockManager here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Manage the stock in a business.
+ * The stock is described by zero or more Products.
+ * 
+ * @author (Kian Rozblat) 
+ * @version (19/11/20)
  */
 public class StockManager
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    // A list of the products.
+    private ArrayList<Product> stock;
+    private String newProductName;
+    
     /**
-     * Constructor for objects of class StockManager
+     * Starts the stock manager.
      */
     public StockManager()
     {
-        // initialise instance variables
-        x = 0;
+        stock = new ArrayList<>();
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Add a product to the list.
      */
-    public int sampleMethod(int y)
+    public void addProduct(Product item)
     {
-        // put your code here
-        return x + y;
+        stock.add(item);
+    }
+    
+    /**Sells a product in the list
+     * 
+     */
+    public void sellProduct(int id, int quantity)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null)
+        {
+            if(quantity > product.getQuantity())
+                quantity = product.getQuantity();
+            printProduct(id);
+            
+            for(int count = 0; count <= quantity; count++)
+            {
+                product.sellOne();
+            }
+        
+            printProduct(id);
+        }
+    }
+    
+    /**
+     * Receive a delivery of a particular product.
+     * Increase the quantity of the product by the given amount.
+     */
+    public void deliverProduct(int id, int amount)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null)
+            product.deliver(amount);
+        else
+            System.out.println("Invalid Product ID = " + id);
+    }
+    
+    /**
+     * Try to find a product in the stock with the given id.
+     */
+    public Product findProduct(int id)
+    {
+        for(Product product : stock)
+        {
+            if(product.getID() == id)
+            {
+                return product;
+            }
+        }
+        
+        return null;
+    }
+    
+    /**
+     * using the ID it would show the number in stock
+     */
+    public int numberInStock(int id)
+    {
+        return 0;
+    }
+
+    /**
+     * Print details of all the products.
+     */
+    public void printAllProducts()
+    {
+        System.out.println();
+        System.out.println("Rozblat's List of Stock");
+        System.out.println("========================");
+        System.out.println();
+        System.out.println();
+        
+        for(Product product : stock)
+        {
+            System.out.println(product);
+        }
+        
+        System.out.println();
+    }
+    
+    /**this prints out the products from the id
+     * 
+     */
+    public void printProduct(int id)
+    {
+        Product product = findProduct(id);
+        
+        if(product != null)
+        {
+            System.out.println(product.toString());
+        }
+    }
+    
+    /**
+     * allows the mnager to delete the product based on ID
+     */
+    public void deleteProduct(int id)
+    {
+        Product product = findProduct(id);
+        {
+                if(product != null)
+                {
+                    this.stock.remove(product);
+                    System.out.print("You have deleted " + product);
+                }
+        }
+    }
+    
+    /**
+     * this renames the product based on the ID
+     */
+    public void renameProduct(int id,String newName)
+    {
+        Product product = findProduct(id);
+        if (product != null)
+        {
+                String oldName = product.getName();
+                product.renameProduct(newName);
+
+                if(oldName != product.getName())
+                {
+                    System.out.println("You have successfully renamed "+ oldName+ " to " + product.getName());
+                }
+
+        }
+    }
+    
+    /**this prints all the products with stock less than 3
+     * 
+     */
+    public ArrayList<Product> getLowStock() 
+    {
+        ArrayList<Product> result = new ArrayList<Product>();
+        for (Product product : stock) 
+        {
+            if(product.getQuantity() <= 3)
+            {
+                System.out.println("Products that are low in stock " + product);
+            }
+        }
+        return result;
+    }
+    
+    /**
+     * Try to find a product in the stock with the given id.
+     */
+    public void searchByName(String name)
+    {
+        for(Product product : stock)
+        {
+            name = name.toLowerCase();
+            String productName = product.getName().toLowerCase();
+            if(productName.startsWith(name))
+            {
+                System.out.println(product);
+            }
+        }
     }
 }
