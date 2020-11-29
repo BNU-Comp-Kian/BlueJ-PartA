@@ -11,17 +11,15 @@ public class StockApp
     public final String ADD = "add";
 
     public final int FIRST_ID = 101;
+    
     // Use to get user input
     private InputReader input;
-
     private StockManager manager;
-
     private StockDemo demo;
-
-    private int nextID = FIRST_ID;
-
     private Product product;
-
+    
+    private int nextID = FIRST_ID;
+    
     /**
      * Constructor for objects of class StockApp
      */
