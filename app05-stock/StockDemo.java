@@ -47,7 +47,7 @@ public class StockDemo
         manager.printAllProducts();
         demoDeliverProducts();
         manager.printAllProducts();
-        demoSellProducts();
+        demo.sellProducts();
         manager.printAllProducts();
         manager.getLowStock();
     }
@@ -71,7 +71,7 @@ public class StockDemo
      * Show the before and after status of the product.
      * @param id The ID of the product being sold.
      */
-    private void demoSellProducts()
+    private void sellProducts()
     {
         int quantity = 0;
         
@@ -112,7 +112,7 @@ public class StockDemo
     }
 
     /**
-     * @return The stock manager.
+     * return The stock manager.
      */
     public StockManager getManager()
     {

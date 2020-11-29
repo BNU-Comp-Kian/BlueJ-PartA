@@ -21,10 +21,7 @@ public class InputReader
     }
 
     /**
-     * Read a line of text from standard input (the text terminal),
-     * and return it as a String.
-     *
-     * @return  A String typed by the user.
+     * Read the text inputted by the user and return it as a String.
      */
     public String getInput()
     {

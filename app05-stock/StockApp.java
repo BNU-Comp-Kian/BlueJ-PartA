@@ -31,7 +31,7 @@ public class StockApp
     }
 
     /**
-     * 
+     * this method runs the program
      */
     public void run()
     {
@@ -52,7 +52,7 @@ public class StockApp
     }
 
     /**
-     * 
+     * executes the chosen menu choice
      */
     public void executeMenuChoice(String choice)
     {
@@ -103,7 +103,7 @@ public class StockApp
     }
     
     /**
-     * 
+     * will deliver the product to add to the stock
      */
     public void deliverProduct()
     {
@@ -114,13 +114,13 @@ public class StockApp
 
         int amount = input.getInt("enter amount \n");
 
-        demo.sellProduct(id,amount);
+        demo.addProducts(id,amount);
 
         System.out.println("the following product has been sold " + id);
     }
 
     /**
-     * 
+     * will search for a product based on the name
      */
     public void searchProduct()
     {
@@ -131,7 +131,7 @@ public class StockApp
     }
     
     /**
-     * 
+     * print all the low stock items
      */
     public void lowstock()
     {
@@ -140,7 +140,7 @@ public class StockApp
     }
 
     /**
-     * 
+     * restocks the items with stock less than 3 with a selected amount
      */
     public void restock()
     {
@@ -150,7 +150,7 @@ public class StockApp
     }
 
     /**
-     * 
+     * add a product into the list
      */
     public void addProduct()
     {
@@ -169,7 +169,7 @@ public class StockApp
     }
 
     /**
-     * 
+     * remove a product from the list
      */
     public void removeProduct()
     {
@@ -188,7 +188,7 @@ public class StockApp
     }
     
     /**
-     * 
+     * sells a product
      */
     private void sellProduct()
     {
@@ -205,12 +205,20 @@ public class StockApp
     }
     
     /**
-     * 
+     * print all the low stock items
      */
     public void lowStock ()
     {
         System.out.println();
         manager.getLowStock(0);
+    }
+    
+    /**
+     * renames the product
+     */
+    public void renameProduct()
+    {
+     manager.renameProduct();  
     }
     
     /**
@@ -244,7 +252,7 @@ public class StockApp
     }
 
     /**
-     * 
+     * print all the products in a list
      */
     public void printAllProducts()
     {
