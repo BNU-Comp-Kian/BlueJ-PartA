@@ -102,6 +102,11 @@ public class StockApp
         {
             sellProduct();   
         }
+        
+        else if(choice.equals("quit"))
+        {
+            quit();   
+        }
     }
 
     /**
@@ -274,5 +279,13 @@ public class StockApp
     public void printAllProducts()
     {
         manager.printAllProducts();
+    }
+    
+    /**
+     * Quit the program
+     */
+    public void quit()
+    {
+      System.exit(0);
     }
 }
