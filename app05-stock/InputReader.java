@@ -23,11 +23,11 @@ public class InputReader
     /**
      * Read the text inputted by the user and return it as a String.
      */
-    public String getInput()
+    public String getInput(String prompt)
     {
-        System.out.print("Type the chosen Command ");         // print prompt
+        System.out.print(prompt);         // print prompt
         String inputLine = reader.nextLine();
-
+        
         return inputLine;
     }
     

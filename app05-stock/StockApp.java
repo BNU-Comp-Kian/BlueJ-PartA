@@ -17,7 +17,7 @@ public class StockApp
     private StockManager manager;
     private StockDemo demo;
     private Product product;
-
+    
     private int nextID = FIRST_ID;
 
     /**
@@ -42,12 +42,14 @@ public class StockApp
             printHeading();
             printMenuChoices();
 
-            String choice = input.getInput();
+            String choice = input.getInput("Please enter choice");
             choice = choice.toLowerCase();
 
-            executeMenuChoice(choice);
-            if(choice.equals(ADD))
+            
+            if(choice.equals("quit"))
                 finished = true;
+            else
+                executeMenuChoice(choice);
         }
     }
 
@@ -73,7 +75,7 @@ public class StockApp
 
         else if(choice.equals("rename"))
         {
-            //renameProduct();   
+            renameProduct();   
         }
 
         else if(choice.equals("deliver"))
@@ -124,8 +126,7 @@ public class StockApp
      */
     public void searchProduct()
     {
-        System.out.println("Enter name of product ");
-        String word = input.getInput();
+        String word = input.getInput("Enter name of product ");
 
         manager.searchByName(word);
     }
@@ -157,12 +158,10 @@ public class StockApp
         System.out.println("Add a new product");
         System.out.println();
 
-        System.out.println();
-        String value = input.getInput();
+        String value = input.getInput("Please enter product ID");
         int id = Integer.parseInt(value);// this gets highlighted with error when add product fails
 
-        System.out.print("Enter product name \n");
-        String name = input.getInput();
+        String name = input.getInput("Enter product name \n");
 
         Product product = new Product(id, name);
         manager.addProduct(product);
@@ -176,8 +175,7 @@ public class StockApp
         System.out.println("Remove a Product ");
         System.out.println();
 
-        System.out.println("Enter the product ID ");
-        String number = input.getInput();
+        String number = input.getInput("Enter the product ID ");
 
         int id = Integer.parseInt(number);
 
@@ -212,24 +210,32 @@ public class StockApp
         System.out.println();
         manager.getLowStock(0);
     }
-
+    
     /**
-     * this renames the product based on the ID
+     * renames the chosen product
      */
-    public void renameProduct(int id,String newName)
+    public void renameProduct()
     {
-        Product product = manager.findProduct(id);
-        if (product != null)
+        String name = "";
+        System.out.println("Rename a Product ");
+        System.out.println();
+
+        int id = input.getInt("Enter the product ID ");
+        
+        boolean isValid = false;
+        while(isValid == false)
         {
-            String oldName = product.getName();
-            product.renameProduct(newName);
-
-            if(oldName != product.getName())
-            {
-                System.out.println("You have successfully renamed "+ oldName+ " to " + product.getName());
-            }
-
+            name = input.getInput("Enter product new name");
+            if (name.isBlank())
+                System.out.println("Name is blank");
+            else 
+                isValid = true;
         }
+        
+        manager.renameProduct(id,name);
+
+        System.out.println("the following product has been renamed to " + name);
+
     }
 
     /**

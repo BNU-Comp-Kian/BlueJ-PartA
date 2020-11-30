@@ -135,7 +135,24 @@ public class StockManager
         }
     }
     
-    
+    /**
+     * this renames the product based on the ID
+     */
+    public void renameProduct(int id,String newName)
+    {
+        Product product = findProduct(id);
+        if (product != null)
+        {
+            String oldName = product.getName();
+            product.renameProduct(newName);
+
+            if(oldName != product.getName())
+            {
+                System.out.println("You have successfully renamed "+ oldName+ " to " + product.getName());
+            }
+
+        }
+    }
     
     /**this prints all the products with stock less than 3
      * 
