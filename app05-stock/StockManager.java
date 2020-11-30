@@ -28,8 +28,8 @@ public class StockManager
         stock.add(item);
     }
     
-    /**Sells a product in the list
-     * 
+    /**
+     * Sells a product in the list
      */
     public void sellProduct(int id, int quantity)
     {
@@ -107,8 +107,8 @@ public class StockManager
         System.out.println();
     }
     
-    /**this prints out the products from the id
-     * 
+    /**
+     * this prints out the products from the id
      */
     public void printProduct(int id)
     {
@@ -154,8 +154,8 @@ public class StockManager
         }
     }
     
-    /**this prints all the products with stock less than 3
-     * 
+    /**
+     * this prints all the products with stock less than 3
      */
     public ArrayList<Product> getLowStock(int restockAmount) 
     {
