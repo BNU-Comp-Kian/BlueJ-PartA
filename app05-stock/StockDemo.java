@@ -47,9 +47,9 @@ public class StockDemo
         manager.printAllProducts();
         demoDeliverProducts();
         manager.printAllProducts();
-        demo.sellProducts();
+        sellProducts();
         manager.printAllProducts();
-        manager.getLowStock();
+        manager.getLowStock(0);
     }
     
     /**
@@ -79,6 +79,17 @@ public class StockDemo
         {
             quantity = randomGenerator.nextInt(4);
             manager.sellProduct(id,quantity);
+        }
+    }
+    
+    public void sellProduct(int id, int amount)
+    {
+        Product product = getProduct(id);
+        if(product != null) 
+        {
+            showDetails(id);
+            product.sellOne();
+            showDetails(id);
         }
     }
     

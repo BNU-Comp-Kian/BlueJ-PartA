@@ -12,7 +12,7 @@ public class StockApp
 
     public final int FIRST_ID = 101;
     
-    // Use to get user input
+    // User input
     private InputReader input;
     private StockManager manager;
     private StockDemo demo;
@@ -73,7 +73,7 @@ public class StockApp
 
         else if(choice.equals("rename"))
         {
-            renameProduct();   
+            //renameProduct();   
         }
 
         else if(choice.equals("deliver"))
@@ -114,7 +114,7 @@ public class StockApp
 
         int amount = input.getInt("enter amount \n");
 
-        demo.addProducts(id,amount);
+        manager.deliverProduct(id, amount);// the main error
 
         System.out.println("the following product has been sold " + id);
     }
@@ -136,7 +136,7 @@ public class StockApp
     public void lowstock()
     {
         System.out.println("The following products have 3 or less in stock");
-        manager.getLowStockLevel(0);
+        manager.getLowStock(0);
     }
 
     /**
@@ -146,7 +146,7 @@ public class StockApp
     {
         System.out.println("Products less than 3 will be restocked");
         int restock = input.getInt("Enter amount to restock");
-        manager.getLowStockLevel(restock);
+        manager.getLowStock(restock);
     }
 
     /**
@@ -201,7 +201,7 @@ public class StockApp
      
         demo.sellProduct(id,amount);
      
-        System.out.println("The Following product has been sold "+ od);
+        System.out.println("The Following product has been sold "+ id);
     }
     
     /**
@@ -213,12 +213,24 @@ public class StockApp
         manager.getLowStock(0);
     }
     
+   
     /**
-     * renames the product
+     * this renames the product based on the ID
      */
-    public void renameProduct()
+    public void renameProduct(int id,String newName)
     {
-     manager.renameProduct();  
+        Product product = manager.findProduct(id);
+        if (product != null)
+        {
+                String oldName = product.getName();
+                product.renameProduct(newName);
+
+                if(oldName != product.getName())
+                {
+                    System.out.println("You have successfully renamed "+ oldName+ " to " + product.getName());
+                }
+
+        }
     }
     
     /**
@@ -228,15 +240,15 @@ public class StockApp
     {
         System.out.println();
         System.out.println("    Add:        Add a new product");
-        System.out.println("    Remove:     Remove an old product");
+        System.out.println("    Remove:     Remove a specific product");
         System.out.println("    PrintAll:   Print all products");
+        System.out.println("    Low-Stock:  Print all low stock");
+        System.out.println("    Re-Stock:   Re-stock low stock product");
+        System.out.println("    Rename:     Rename a product");
+        System.out.println("    Sell:       Sell a product");
+        System.out.println("    Deliver:    Remove an old product");
+        System.out.println("    Search:     Search for specific product");
         System.out.println("    Quit:       Quit the program");
-        System.out.println("    Sell:        Add a new product");
-        System.out.println("    Deliver:     Remove an old product");
-        System.out.println("    Search:   Print all products");
-        System.out.println("    Low-Stock:       Quit the program");
-        System.out.println("    Re-Stock:        Add a new product");
-        System.out.println("    Rename:     Remove an old product");
         System.out.println();        
     }
 
