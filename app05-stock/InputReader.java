@@ -32,7 +32,7 @@ public class InputReader
     }
     
     /**
-     * 
+     * Gets an integer
      */
     public int getInt(String prompt)
     {
