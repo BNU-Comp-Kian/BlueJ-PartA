@@ -11,15 +11,15 @@ public class StockApp
     public final String ADD = "add";
 
     public final int FIRST_ID = 101;
-    
+
     // User input
     private InputReader input;
     private StockManager manager;
     private StockDemo demo;
     private Product product;
-    
+
     private int nextID = FIRST_ID;
-    
+
     /**
      * Constructor for objects of class StockApp
      */
@@ -101,7 +101,7 @@ public class StockApp
             sellProduct();   
         }
     }
-    
+
     /**
      * will deliver the product to add to the stock
      */
@@ -116,7 +116,7 @@ public class StockApp
 
         manager.deliverProduct(id, amount);// the main error
 
-        System.out.println("the following product has been sold " + id);
+        System.out.println("the following product has been delivered " + id);
     }
 
     /**
@@ -124,12 +124,12 @@ public class StockApp
      */
     public void searchProduct()
     {
-     System.out.println("Enter name of product ");
-     String word = input.getInput();
-     
-     manager.searchByName(word);
+        System.out.println("Enter name of product ");
+        String word = input.getInput();
+
+        manager.searchByName(word);
     }
-    
+
     /**
      * print all the low stock items
      */
@@ -159,9 +159,9 @@ public class StockApp
 
         System.out.println();
         String value = input.getInput();
-        int id = Integer.parseInt(value);
+        int id = Integer.parseInt(value);// this gets highlighted with error when add product fails
 
-        System.out.print("Enter product name");
+        System.out.print("Enter product name /n");
         String name = input.getInput();
 
         Product product = new Product(id, name);
@@ -173,20 +173,20 @@ public class StockApp
      */
     public void removeProduct()
     {
-       System.out.println("Remove a Product ");
-       System.out.println();
+        System.out.println("Remove a Product ");
+        System.out.println();
 
-       System.out.println("Enter the product ID ");
-       String number = input.getInput();
+        System.out.println("Enter the product ID ");
+        String number = input.getInput();
 
-       int id = Integer.parseInt(number);
+        int id = Integer.parseInt(number);
 
-       manager.deleteProduct(id);
+        manager.deleteProduct(id);
 
-       System.out.println("the following product has been deleted " + id);
+        System.out.println("the following product has been deleted " + id);
 
     }
-    
+
     /**
      * sells a product
      */
@@ -194,16 +194,16 @@ public class StockApp
     {
         System.out.println("Sell a Product");
         System.out.println();
-     
+
         int id = input.getInt("Enter the Product ID \n");
-     
+
         int amount = input.getInt("Enter amount to sell");
-     
+
         demo.sellProduct(id,amount);
-     
+
         System.out.println("The Following product has been sold "+ id);
     }
-    
+
     /**
      * print all the low stock items
      */
@@ -212,8 +212,7 @@ public class StockApp
         System.out.println();
         manager.getLowStock(0);
     }
-    
-   
+
     /**
      * this renames the product based on the ID
      */
@@ -222,17 +221,17 @@ public class StockApp
         Product product = manager.findProduct(id);
         if (product != null)
         {
-                String oldName = product.getName();
-                product.renameProduct(newName);
+            String oldName = product.getName();
+            product.renameProduct(newName);
 
-                if(oldName != product.getName())
-                {
-                    System.out.println("You have successfully renamed "+ oldName+ " to " + product.getName());
-                }
+            if(oldName != product.getName())
+            {
+                System.out.println("You have successfully renamed "+ oldName+ " to " + product.getName());
+            }
 
         }
     }
-    
+
     /**
      * Print out a menu of operation choices
      */
