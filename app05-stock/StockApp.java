@@ -164,7 +164,7 @@ public class StockApp
         System.out.println();
 
         String value = input.getInput("Please enter product ID");
-        int id = Integer.parseInt(value);// this gets highlighted with error when add product fails
+        int id = Integer.parseInt(value);
 
         String name = input.getInput("Enter product name \n");
 
