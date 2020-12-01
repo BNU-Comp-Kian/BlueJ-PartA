@@ -1,0 +1,200 @@
+
+Please enter product ID113
+Enter product name 
+iphone44
+******************************
+ Stock Management Application 
+    App05: by Kian Rozblat
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove a specific product
+    PrintAll:   Print all products
+    Low-Stock:  Print all low stock
+    Re-Stock:   Re-stock low stock product
+    Rename:     Rename a product
+    Sell:       Sell a product
+    Deliver:    Remove an old product
+    Search:     Search for specific product
+    Quit:       Quit the program
+
+Please enter choiceprintall
+
+Rozblat's List of Stock
+========================
+
+
+101: Samsung Galazy Z Fold 2 5G Stock Level: 0
+102: Samsung Galaxy Note 20 Stock Level: 0
+103: Apple iPhone 12 Stock Level: 0
+104: Samsung Galaxy S20 Stock Level: 0
+105: Google Pixel 5 Stock Level: 0
+106: OnePlus 8T Stock Level: 0
+107: LG V60 ThinQ 5G Stock Level: 0
+108: Samsung Galaxy S11 FE Stock Level: 0
+109: Sony Xperia 1 II Stock Level: 0
+110: Samsung Galaxy Note 10 Plus Stock Level: 0
+111: iphone22 Stock Level: 0
+112: iphone33 Stock Level: 0
+113: iphone44 Stock Level: 0
+
+******************************
+ Stock Management Application 
+    App05: by Kian Rozblat
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove a specific product
+    PrintAll:   Print all products
+    Low-Stock:  Print all low stock
+    Re-Stock:   Re-stock low stock product
+    Rename:     Rename a product
+    Sell:       Sell a product
+    Deliver:    Remove an old product
+    Search:     Search for specific product
+    Quit:       Quit the program
+
+Please enter choiceadd
+Add a new product
+
+Please enter product ID114
+Enter product name 
+iphone55
+******************************
+ Stock Management Application 
+    App05: by Kian Rozblat
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove a specific product
+    PrintAll:   Print all products
+    Low-Stock:  Print all low stock
+    Re-Stock:   Re-stock low stock product
+    Rename:     Rename a product
+    Sell:       Sell a product
+    Deliver:    Remove an old product
+    Search:     Search for specific product
+    Quit:       Quit the program
+
+Please enter choiceadd
+Add a new product
+
+Please enter product ID114
+Enter product name 
+iphone55
+******************************
+ Stock Management Application 
+    App05: by Kian Rozblat
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove a specific product
+    PrintAll:   Print all products
+    Low-Stock:  Print all low stock
+    Re-Stock:   Re-stock low stock product
+    Rename:     Rename a product
+    Sell:       Sell a product
+    Deliver:    Remove an old product
+    Search:     Search for specific product
+    Quit:       Quit the program
+
+Please enter choiceprintall
+
+Rozblat's List of Stock
+========================
+
+
+101: Samsung Galazy Z Fold 2 5G Stock Level: 0
+102: Samsung Galaxy Note 20 Stock Level: 0
+103: Apple iPhone 12 Stock Level: 0
+104: Samsung Galaxy S20 Stock Level: 0
+105: Google Pixel 5 Stock Level: 0
+106: OnePlus 8T Stock Level: 0
+107: LG V60 ThinQ 5G Stock Level: 0
+108: Samsung Galaxy S11 FE Stock Level: 0
+109: Sony Xperia 1 II Stock Level: 0
+110: Samsung Galaxy Note 10 Plus Stock Level: 0
+111: iphone22 Stock Level: 0
+112: iphone33 Stock Level: 0
+113: iphone44 Stock Level: 0
+114: iphone55 Stock Level: 0
+114: iphone55 Stock Level: 0
+
+******************************
+ Stock Management Application 
+    App05: by Kian Rozblat
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove a specific product
+    PrintAll:   Print all products
+    Low-Stock:  Print all low stock
+    Re-Stock:   Re-stock low stock product
+    Rename:     Rename a product
+    Sell:       Sell a product
+    Deliver:    Remove an old product
+    Search:     Search for specific product
+    Quit:       Quit the program
+
+Please enter choiceadd
+Add a new product
+
+Please enter product ID116
+Enter product name 
+
+******************************
+ Stock Management Application 
+    App05: by Kian Rozblat
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove a specific product
+    PrintAll:   Print all products
+    Low-Stock:  Print all low stock
+    Re-Stock:   Re-stock low stock product
+    Rename:     Rename a product
+    Sell:       Sell a product
+    Deliver:    Remove an old product
+    Search:     Search for specific product
+    Quit:       Quit the program
+
+Please enter choiceprintall
+
+Rozblat's List of Stock
+========================
+
+
+101: Samsung Galazy Z Fold 2 5G Stock Level: 0
+102: Samsung Galaxy Note 20 Stock Level: 0
+103: Apple iPhone 12 Stock Level: 0
+104: Samsung Galaxy S20 Stock Level: 0
+105: Google Pixel 5 Stock Level: 0
+106: OnePlus 8T Stock Level: 0
+107: LG V60 ThinQ 5G Stock Level: 0
+108: Samsung Galaxy S11 FE Stock Level: 0
+109: Sony Xperia 1 II Stock Level: 0
+110: Samsung Galaxy Note 10 Plus Stock Level: 0
+111: iphone22 Stock Level: 0
+112: iphone33 Stock Level: 0
+113: iphone44 Stock Level: 0
+114: iphone55 Stock Level: 0
+114: iphone55 Stock Level: 0
+116:  Stock Level: 0
+
+******************************
+ Stock Management Application 
+    App05: by Kian Rozblat
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove a specific product
+    PrintAll:   Print all products
+    Low-Stock:  Print all low stock
+    Re-Stock:   Re-stock low stock product
+    Rename:     Rename a product
+    Sell:       Sell a product
+    Deliver:    Remove an old product
+    Search:     Search for specific product
+    Quit:       Quit the program
+
+Please enter choice
